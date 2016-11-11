@@ -9,8 +9,66 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/tt"
+        android:paddingLeft="100dp"
+        android:paddingTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:textSize="24dp"
+        android:text="@string/title" />
+
+    <LinearLayout
+        android:paddingLeft="120dp"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/tt"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:id="@+id/im2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:focusable="false"
+                android:src="@drawable/flashlog"/>
+            <TextView
+                android:id="@+id/bt1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:textColor="#ff4444"
+                android:text="@string/sercher"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:focusable="false"
+                android:src="@drawable/flashlog"/>
+            <Button
+                android:id="@+id/bt2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:textColor="#ff4444"
+                android:text="@string/manager"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
 
 </RelativeLayout>

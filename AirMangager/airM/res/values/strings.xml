@@ -4,5 +4,8 @@
     <string name="app_name">airmanage</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title">title</string>
+    <string name="manager">管理</string>
+    <string name="sercher">查询</string>
 
 </resources>
