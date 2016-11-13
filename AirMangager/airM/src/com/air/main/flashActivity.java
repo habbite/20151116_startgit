@@ -3,6 +3,9 @@ package com.air.main;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.widget.RelativeLayout;
 
 /**
  * Created by Yuriy on 2016/11/11.
@@ -14,6 +17,13 @@ public class flashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.flash);
+
+
+        Animation anim = new AlphaAnimation(0f,1.0f);
+        anim.setDuration(2000);
+        RelativeLayout flsly = (RelativeLayout) findViewById(R.id.flshlayout);
+        flsly.setAnimation(anim);
+
         enterMain();
     }
 

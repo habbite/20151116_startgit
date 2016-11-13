@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/mainLyout"
     tools:context=".MainActivity" >
 
     <TextView
@@ -14,7 +15,8 @@
         android:paddingTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24dp"
+        android:textSize="30dp"
+        android:textColor="@color/black"
         android:text="@string/title" />
 
     <LinearLayout
@@ -26,45 +28,50 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:focusable="true"
+            android:id="@+id/searchlyout"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:orientation="vertical"
-            android:layout_gravity="center"
             >
             <ImageView
-                android:id="@+id/im2"
+                android:id="@+id/im1"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:focusable="false"
-                android:src="@drawable/flashlog"/>
+                android:layout_height="110dp"
+                android:scaleType="fitXY"
+                android:background="@color/halfblack"
+                android:src="@drawable/ic_action_emo_angry"/>
             <TextView
                 android:id="@+id/bt1"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="20dp"
                 android:gravity="center"
-                android:textColor="#ff4444"
+                android:background="@color/txhalfblack"
                 android:text="@string/sercher"/>
 
         </LinearLayout>
 
         <LinearLayout
+            android:focusable="true"
+            android:id="@+id/managerlyout"
             android:paddingLeft="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="160dp"
+            android:layout_height="130dp"
             android:orientation="vertical"
             >
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:focusable="false"
-                android:src="@drawable/flashlog"/>
-            <Button
+                android:id="@+id/im2"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@color/halfblack"
+                android:src="@drawable/ic_action_emo_basic"/>
+            <TextView
                 android:id="@+id/bt2"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:gravity="center"
-                android:textSize="10dp"
-                android:textColor="#ff4444"
+                android:background="@color/txhalfblack"
                 android:text="@string/manager"/>
 
         </LinearLayout>
