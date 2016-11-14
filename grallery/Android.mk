@@ -8,7 +8,7 @@ LOCAL_SRC_FILES := $(call all-subdir-java-files)
 LOCAL_JAVA_LIBRARIES :=
 
 
-LOCAL_PACKAGE_NAME := android_stadio_base
+LOCAL_PACKAGE_NAME := Grallery
 
 LOCAL_CERTIFICATE := platform
 

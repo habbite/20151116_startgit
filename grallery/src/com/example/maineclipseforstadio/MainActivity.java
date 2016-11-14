@@ -3,6 +3,7 @@ package com.example.maineclipseforstadio;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,20 +14,21 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-
+	private static String TAG = "MainActivitty---";
 
 	private Gallery mg;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		Log.i(TAG, "oncreat");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-		mg = (Gallery) findViewById(R.id.galleryid);
-		mg.setAdapter(new ImageAdapter(this));
+		Log.i(TAG, "..........");
+		mg = (Gallery)MainActivity.this.findViewById(R.id.galleryid);
+		mg.setAdapter(new ImageAdapter(MainActivity.this));
 		mg.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-				Toast.makeText(MainActivity.this, "click" + i + "��ͼƬ", Toast.LENGTH_LONG).show();
+				Toast.makeText(MainActivity.this, "click" + i + "��ͼƬ", Toast.LENGTH_LONG).show();
 			}
 		});
 
@@ -75,7 +77,7 @@ public class MainActivity extends Activity {
 			i.setImageResource(mImage[p]);
 			i.setScaleType(ImageView.ScaleType.FIT_XY);
 			i.setLayoutParams(new Gallery.LayoutParams(300,300));
-			return null;
+			return i;
 		}
 	}
 }
