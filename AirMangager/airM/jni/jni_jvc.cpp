@@ -17,20 +17,19 @@
 
 static void jni_jvc_getnum(JNIEnv *env, jobject thiz)
 {
-    LOGV("jni_jvc_getnum");
+   // LOGV("jni_jvc_getnum");
 
 }
 
 
 static const JNINativeMethod gMethods[]{
-        ("*native_getnum",     "()v",   (void *)jni_jvc_getnum),
-
+	{"native_getnum",     "()V",   (void *)jni_jvc_getnum},
 };
 
 static int registerMethods(JNIEnv *env){
-        static const char* const kclassName = "com/air/jni/jvc"
+        static const char* const kclassName = "com/air/jni/jvc";
         jclass clazz;
-        clazz = env->FindClazz(kclassName);
+        clazz = env->FindClass(kclassName);
         if(clazz == NULL){
         return -1;
         }
@@ -48,10 +47,10 @@ jint JNI_OnLoad(JavaVM* vm, void* reserved)
     JNIEnv* env = NULL;
     jint result = -1;
 
-    LOGV("JNI_OnLoad was called");
+    //LOGV("JNI_OnLoad was called");
 
     if (vm->GetEnv((void**) &env, JNI_VERSION_1_4) != JNI_OK) {
-        LOGE("ERROR: GetEnv failed\n");
+       // LOGE("ERROR: GetEnv failed\n");
         goto fail;
     }
     assert(env != NULL);

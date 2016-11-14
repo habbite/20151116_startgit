@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES:= \
-    jin_jvc.cpp
+    jni_jvc.cpp
 
 LOCAL_SHARED_LIBRARIES := \
     libandroid_runtime \
@@ -17,7 +17,12 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_PRELINK_MODULE := false
 
-LOCAL_MODULE:= libdjvcjni
+LOCAL_C_INCLUDES += \
+    frameworks/base/core/jni \
+    external/icu4c/common \
+    $(JNI_H_INCLUDE)
+	
+LOCAL_MODULE:= libjvcjni
 
 include $(BUILD_SHARED_LIBRARY)
 
