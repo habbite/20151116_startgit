@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">tabhost</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="txshow">xml 实现</string>
+    <string name="text1">第一页</string>
+    <string name="text3">第三页</string>
+    <string name="text2">第二页</string>
+    <string name="left">向左</string>
+    <string name="down">向下</string>
+    <string name="right">向右</string>
+
+</resources>
