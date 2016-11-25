@@ -1,0 +1,25 @@
+1shell 简介
+2 打印 echo 与printf
+
+
+1.
+shell 脚本语言是一种解释性语言
+
+#!/bin/bash #注明要使用的解释器
+
+2.
+echo "" echo '' echo + 要打印的东西 三种打印的副作用
+	*使用不带引号的echo时，没法再要显示的文本中使用；因为；在bash shell 中用做定界符
+	*变量替换在单引号中无效
+
+printf 格式化字符串 能指定字符串的宽度，左右对齐方式等，不会自动添加换行符
+	#!/bin/bash
+	#文件名: printf.sh
+	printf "%-5s %-10s %-4s\n" No Name Mark
+	printf "%-5s %-10s %-4.2f\n" 1 Sarath 80.3456
+	printf "%-5s %-10s %-4.2f\n" 2 James 90.9989
+	printf "%-5s %-10s %-4.2f\n" 3 Jeff 77.564
+
+	*%替换符 %s格式化替换符 对应的参数可以置于带引号的格式化串之后
+	- 左对齐 默认右对齐
+	5 字符串宽度
